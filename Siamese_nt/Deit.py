@@ -126,11 +126,11 @@ def deit_small_distilled_patch16_224(pretrained=True, img_size=(224,224), num_cl
     model.default_cfg = _cfg()
     if pretrained:
         # load checkpoint from file
-        checkpoint = torch.load(r'/content/Dual/modelweights/base_model/deit_small_distilled_patch16_224-649709d9.pth', map_location="cpu")
-        # checkpoint = torch.hub.load_state_dict_from_url(
-        #     url="https://dl.fbaipublicfiles.com/deit/deit_small_distilled_patch16_224-649709d9.pth",
-        #     map_location="cpu", check_hash=True
-        # )#"https://dl.fbaipublicfiles.com/deit/deit_small_distilled_patch16_224-649709d9.pth"
+        # checkpoint = torch.load(r'/content/Dual/modelweights/base_model/deit_small_distilled_patch16_224-649709d9.pth', map_location="cpu")
+        checkpoint = torch.hub.load_state_dict_from_url(
+            url="https://dl.fbaipublicfiles.com/deit/deit_small_distilled_patch16_224-649709d9.pth",
+            map_location="cpu", check_hash=True
+        )#"https://dl.fbaipublicfiles.com/deit/deit_small_distilled_patch16_224-649709d9.pth"
         # resize the positional embedding
         weight = checkpoint["model"]['pos_embed']
         ori_size = np.sqrt(weight.shape[1] - 1).astype(int)
