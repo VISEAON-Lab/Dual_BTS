@@ -5,12 +5,12 @@
 
 
 # ARM (l4t)
-FROM nvcr.io/nvidia/l4t-pytorch:r35.1.0-pth1.11-py3
+# FROM nvcr.io/nvidia/l4t-pytorch:r35.1.0-pth1.11-py3
 
 # AMD64
 # FROM rwthika/ros-torch:noetic-desktop-full-torch1.11.0-py-v23.06b
 # FROM rwthika/ros-torch:noetic-perception-torch1.11.0-py
-# FROM rwthika/ros-torch:noetic-perception-torch1.11.0-py
+FROM rwthika/ros-torch:noetic-perception-torch1.11.0-py
 
 # FROM pytorch/pytorch:1.8.1-cuda11.1-cudnn8-devel
 # RUN apt-get update && apt-get install -y python3-tk

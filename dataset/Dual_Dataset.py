@@ -30,7 +30,7 @@ def input_transform(size):
 
 
 class Dual_Dataset(torch.utils.data.Dataset):
-    def __init__(self, mode = '', root = r'/content/Dual/dataset/data', print_bool=False, polar = '',args=None): #CV-dataset
+    def __init__(self, mode = '', root = r'/content/Dual_BTS/dataset/data', print_bool=False, polar = '',args=None): #CV-dataset
         super(Dual_Dataset, self).__init__()
 
         self.args = args
@@ -119,7 +119,7 @@ class Dual_Dataset(torch.utils.data.Dataset):
             img_FLS = self.transform_FLS(img_FLS)
             # img_FLC = cv2.imread( os.path.join(self.root, self.id_test_list[index][2].replace("/docker/bags/", "").replace('\n', "")))
             # flc_path = os.path.join(self.root, self.id_test_list[index][1].replace("/docker/bags/", "").replace('\n', ""))
-            flc_path = '/content/Dual/dataset/data/20221211_092506/imgs/00019230_original.tiff'
+            flc_path = '/content/Dual_BTS/dataset/data/20221211_092506/imgs/00019230_original.tiff'
             img_FLC = cv2.imread(flc_path)
         
             img_FLC = cv2.cvtColor(img_FLC, cv2.COLOR_BGR2RGB)

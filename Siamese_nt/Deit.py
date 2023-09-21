@@ -190,18 +190,18 @@ def Plot_attention(self,indexes,last_map):
     for j, index in enumerate(indexes.cpu().numpy()):
         # plt.imsave(os.path.join(self.save, str(indexes[j].cpu().numpy()) + '.png'),
         #     np.tile(np.expand_dims(last_map[j]/ np.max(last_map[j]), 2), [1, 1, 3]))
-        with open(r"/content/Dual/dataset/data/single_501.csv") as f:
+        with open(r"/content/Dual_BTS/dataset/data/single_501.csv") as f:
             my_csv_data = list(csv.reader(f))
-        print(os.path.join(r'/content/Dual/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
+        print(os.path.join(r'/content/Dual_BTS/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
                            my_csv_data[index][2]))
         
         if not os.path.isdir(self.save):
             os.makedirs(self.save)
-        if self.save == r"/content/Dual/results/attention/trainfls":
-            img = cv2.imread(os.path.join(r'/content/Dual/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
+        if self.save == r"/content/Dual_BTS/results/attention/trainfls":
+            img = cv2.imread(os.path.join(r'/content/Dual_BTS/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
                                       my_csv_data[index][3]))
-        if self.save == r"/content/Dual/results/attention/trainflc":
-            img = cv2.imread(os.path.join(r'/content/Dual/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
+        if self.save == r"/content/Dual_BTS/results/attention/trainflc":
+            img = cv2.imread(os.path.join(r'/content/Dual_BTS/dataset/data', my_csv_data[index][4].replace('\n', ""), "imgs",
                                       my_csv_data[index][2]))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(img)

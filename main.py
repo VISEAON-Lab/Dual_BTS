@@ -57,9 +57,9 @@ parser.add_argument('--wd', '--weight-decay', default=0, type=float,
 parser.add_argument('-p', '--print-freq', default=10, type=int,
                     metavar='N', help='print frequency (default: 10)')
 # parser.add_argument('--resume', default=r"/workspaces/Dual/modelweights/results_train5_test25_batch62/model_best.pth", type=str, metavar='PATH',
-parser.add_argument('--resume', default=r"/content/Dual/modelweights/results_train5_test25_batch62/model_best.pth", type=str, metavar='PATH',
+parser.add_argument('--resume', default=r"/content/Dual_BTS/modelweights/results_train5_test25_batch62/model_best.pth", type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
-parser.add_argument('--save_path', default=r'/content/Dual/results', type=str, metavar='PATH',
+parser.add_argument('--save_path', default=r'/content/Dual_BTS/results', type=str, metavar='PATH',
                     help='path to save checkpoint (default: none)')
 parser.add_argument('--seed', default=0, type=int,
                     help='seed for initializing training. ')

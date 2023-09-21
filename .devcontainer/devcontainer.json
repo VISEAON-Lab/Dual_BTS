@@ -34,6 +34,7 @@
 		"--volume=${env:XAUTH}:${env:XAUTH}",
 		"--volume=/home/user/proj/Dual:/home/catkin_ws/src/Dual",
 		"--volume=/mnt/data/bags/:/home/bags/",
+		"--volume=/home/nir/proj/Dual:/content/Dual_BTS"
 		// "--volume=/media/user/BlueROV1/rov_dataset/:/workspaces/Dual/dataset/fabian",
 	],
 	"customizations": {
@@ -47,6 +48,8 @@
 	},
 
 	// "workspaceFolder": "/home/nir/proj/Dual",
+	"workspaceFolder": "/content/Dual_BTS",
+	
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
