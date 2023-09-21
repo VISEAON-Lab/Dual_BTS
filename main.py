@@ -103,6 +103,7 @@ def main():
                   .format(args.resume, checkpoint['epoch']))
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
+            exit()
 
     cudnn.benchmark = True
     if not os.path.exists(args.save_path):
